@@ -1,0 +1,17 @@
+PR : Travaux Dirigés 1
+
+	Prise en main
+
+
+
+Exercice 4 : La fonction exec et ses variantes
+
+	On on considere le programme exec_sleep.
+	Combien de processus sont-ils crees,
+	processus principal inclus ?
+	Faites l arborescence des processus
+	en montrant les affichages de chaque processus.
+	Si, au lieu d appeler la fontion c sleep a la ligne 13,
+	on appelle la commande Unix sleep a l aide de la fonction execl,
+	le nombre de processus crees et l affichage changent-ils ?
+	Meme question en utilisant execv.

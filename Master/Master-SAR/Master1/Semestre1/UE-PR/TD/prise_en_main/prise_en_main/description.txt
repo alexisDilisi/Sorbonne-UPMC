@@ -1,0 +1,16 @@
+PR : Travaux Dirigés 1
+
+	Prise en main
+
+
+
+Exercice 3 : Description des processus
+
+	On appelle a present la fonction nfork avec le programme repeat_nfork.
+	On rappelle que l instruction ++i < N incremente d abord la variable i
+	et ne compare qu ensuite.
+	Si on suppose que fork n echoue jamais, combien des processus sont-ils crees,
+	processus principal inclus ?
+	Representez l arborescence de processus crees,
+	en specifiant les affichages de chaque processus.
+	On pourra s aider de la fonction getpid.
