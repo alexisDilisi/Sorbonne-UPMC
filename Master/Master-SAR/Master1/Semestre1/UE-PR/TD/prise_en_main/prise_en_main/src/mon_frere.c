@@ -31,12 +31,11 @@ int mon_frere(void)
 		pid_t pidFils11; /* je suis dans le pere 1 */
 		int nbFork = 1;
 
-		printf("je suis un fils mon pid est : %d\n", getpid());
-		printf("je suis un fils mon ppid est : %d\n", getppid());
+		printf("je suis le fils 1 mon pid est : %d, mon ppid est %d\n", getpid(), getppid());
 
 		if((pidFils11 = fork()) == -1)
 		{
-			printf("%s\n", "je suis un fils, je n ai pas pu cree de fils");
+			printf("%s\n", "je suis le fils 1, je n ai pas pu cree de fils");
 			perror("erreur fork\n");
 			exit(0);
 		}
@@ -45,15 +44,13 @@ int mon_frere(void)
 		{
 			/* je suis dans le fils 1.1 */
 
-			printf("je suis un fils mon pid est : %d\n", getpid());
-			printf("je suis un fils mon ppid est : %d\n", getppid());
-			printf("%s\n", "je suis un fils, je n ai pas de fils");
+			printf("je suis le fils 1.1 mon pid est : %d, mon ppid est %d, je n ai pas de fils\n", getpid(), getppid());
 			exit(0);
 		}
 
 		/* je suis dans le pere 1 */
 
-		printf("je suis un fils, j ai cree %d fils\n", nbFork);
+		printf("je suis le fils 1, j ai cree %d fils\n", nbFork);
 		wait(NULL);
 		exit(0);
 	}
@@ -74,13 +71,11 @@ int mon_frere(void)
 		pid_t pidFils12; /* je suis dans le pere 2 */
 		int nbFork = 1;
 
-		printf("je suis un fils mon pid est : %d\n", getpid());
-		printf("je suis un fils mon ppid est : %d\n", getppid());
-		printf("je suis un fils, le pid de mon frere est %d\n", pidFils1);
+		printf("je suis le fils 2 mon pid est : %d, mon ppid est %d, le pid de mon frere est %d\n", getpid(), getppid(), pidFils1);
 
 		if ((pidFils12 = fork()) == -1)
 		{
-			printf("%s\n", "je suis un fils, je n ai pas pu cree de fils");
+			printf("%s\n", "je suis le fils 2, je n ai pas pu cree de fils");
 			perror("erreur fork\n");
 			exit(0);
 		}
@@ -90,15 +85,13 @@ int mon_frere(void)
 
 			/* je suis dans le fils 2.1 */
 
-			printf("je suis un fils mon pid est : %d\n", getpid());
-			printf("je suis un fils mon ppid est : %d\n", getppid());
-			printf("%s\n", "je suis un fils, je n ai pas de fils");
+			printf("je suis le fils 2.1 mon pid est : %d, mon ppid est %d, je n ai pas de fils\n", getpid(), getppid());
 			exit(0);
 		}
 
 		/* je suis dans le pere 2 */
 
-		printf("je suis un fils, j ai cree %d fils\n", nbFork);
+		printf("je suis le fils 2, j ai cree %d fils\n", nbFork);
 		wait(NULL);
 		exit(0);
 	}
