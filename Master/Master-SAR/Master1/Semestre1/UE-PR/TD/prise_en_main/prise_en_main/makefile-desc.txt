@@ -1,0 +1,19 @@
+PR : Travaux Dirigés 1
+
+	Prise en main
+
+
+
+Exercice 1 : Lecture d'un makefile
+
+	On considere le fichier Makefile du projet.
+	A l aide de la documentation Unix de la commande make
+	ainsi que de la documentation plus specifique de Gnu-make,
+	repondez au question suivantes :
+	
+		a quoi sert la ligne .SUFFIXES ?
+		a quoi sert la ligne .PHONY ?
+		a quoi sert la ligne $(BIN)%: $(OBJ)%.o $O ?
+		a quoi sert la ligne $(OBJ)%.o $(SRC)%.c $(HC) ?
+		a quoi sert le signe "-" au debut de certaines lignes ?
+		a quoi sert le doublement de signe"£" a certains endroits ?
