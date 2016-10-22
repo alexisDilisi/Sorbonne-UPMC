@@ -52,13 +52,12 @@ int nfork(int n)
 		
 		/* je suis dans le pere */
 
-		printf("je suis le pere, j ai cree %d fils\n", returnVal);
-		returnVal++;
+		printf("je suis le pere, j ai cree %d fils\n", ++returnVal);
 	}
 
 	/* je suis dans le pere */
 
-	printf("je suis le pere, j ai cree %d fils\n", returnVal);
+	printf("je suis le pere, j ai cree un total de %d fils\n", returnVal);
 	return returnVal;
 }
 
