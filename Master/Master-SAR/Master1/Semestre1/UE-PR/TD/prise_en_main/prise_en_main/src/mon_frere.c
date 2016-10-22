@@ -45,6 +45,8 @@ int mon_frere(void)
 		{
 			/* je suis dans le fils 1.1 */
 
+			printf("je suis un fils mon pid est : %d\n", getpid());
+			printf("je suis un fils mon ppid est : %d\n", getppid());
 			printf("%s\n", "je suis un fils, je n ai pas de fils");
 			exit(0);
 		}
@@ -88,6 +90,8 @@ int mon_frere(void)
 
 			/* je suis dans le fils 2.1 */
 
+			printf("je suis un fils mon pid est : %d\n", getpid());
+			printf("je suis un fils mon ppid est : %d\n", getppid());
 			printf("%s\n", "je suis un fils, je n ai pas de fils");
 			exit(0);
 		}
@@ -110,16 +114,8 @@ int mon_frere(void)
 	return returnVal;
 }
 
-int main(int argc, char** argv)
+int main(void)
 {
-	int nbFork;
-
-	if(argc != 1)
-	{
-		printf("%s\n", "usage : ./mon_frere");
-		return EXIT_FAILURE;
-	}
-
 	mon_frere();
 
 	return EXIT_SUCCESS;
