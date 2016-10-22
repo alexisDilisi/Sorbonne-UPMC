@@ -15,7 +15,7 @@ int nfork(int n)
 	returnVal = -1;
 	
 
-	if((pidFils=fork()) == -1)
+	if((pidFils = fork()) == -1)
 	{
 		perror("erreur fork\n");
 		return returnVal;
@@ -25,13 +25,16 @@ int nfork(int n)
 	{
 		/* je suis dans le fils */
 
+		printf("%s\n", "je suis un fils je retourne 0");
 		exit(0);
 	}
+
+	/* je suis dans le pere */
 
 	returnVal = 1;
 	printf("je suis le pere, j ai cree %d fils\n", returnVal);
 	
-	while(returnVal <= n)
+	while(returnVal < n)
 	{
 		if ((pidFils = fork()) == -1)
 		{
@@ -46,10 +49,14 @@ int nfork(int n)
 			printf("%s\n", "je suis un fils je retourne 0");
 			exit(0);
 		}
+		
+		/* je suis dans le pere */
 
 		printf("je suis le pere, j ai cree %d fils\n", returnVal);
 		returnVal++;
 	}
+
+	/* je suis dans le pere */
 
 	printf("je suis le pere, j ai cree %d fils\n", returnVal);
 	return returnVal;
