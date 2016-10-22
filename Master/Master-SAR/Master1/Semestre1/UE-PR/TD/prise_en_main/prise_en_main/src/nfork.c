@@ -11,8 +11,9 @@
 int nfork(int n)
 {
 	int returnVal;
-	returnVal = -1;
 	pid_t pidFils; /* je suis dans le pere */
+	returnVal = -1;
+	
 
 	if((pidFils=fork()) == -1)
 	{
@@ -56,7 +57,7 @@ int nfork(int n)
 
 int main(int argc, char** argv)
 {
-	int nbFork = atoi(argv[1]);
+	int nbFork;
 
 	if(argc != 2)
 	{
@@ -64,6 +65,7 @@ int main(int argc, char** argv)
 		return EXIT_FAILURE;
 	}
 
+	nbFork = atoi(argv[1]);
 	nfork(nbFork);
 
 	return EXIT_SUCCESS;
