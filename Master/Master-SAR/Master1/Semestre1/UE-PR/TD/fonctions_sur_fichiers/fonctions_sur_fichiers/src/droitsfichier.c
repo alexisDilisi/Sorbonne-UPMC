@@ -38,7 +38,7 @@ int main(int argc, char** argv)
 				return EXIT_FAILURE;
 			case 'E':
 			case 'e': unlink(argv[2]);
-				break;
+				return EXIT_SUCCESS;
 			case 'R':
 			case 'r': if(argc > 3)
 				{
@@ -53,10 +53,10 @@ int main(int argc, char** argv)
 				{
 					if (argv[3][0] == 'R' || argv[3][0] == 'r')
 					{
-						chmod(argv[1], droitsLecture);
+						chmod(argv[2], droitsLecture);
 					}
 
-					chmod(argv[1], droitsLectureEcriture);
+					chmod(argv[2], droitsLectureEcriture);
 					break;
 				}
 

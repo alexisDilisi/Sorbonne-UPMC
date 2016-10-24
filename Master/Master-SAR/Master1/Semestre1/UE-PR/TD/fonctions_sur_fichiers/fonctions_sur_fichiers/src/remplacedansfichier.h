@@ -1,0 +1,4 @@
+#ifndef H_REMPLACEDANSFICHIER
+#define H_REMPLACEDANSFICHIER
+
+#endif
