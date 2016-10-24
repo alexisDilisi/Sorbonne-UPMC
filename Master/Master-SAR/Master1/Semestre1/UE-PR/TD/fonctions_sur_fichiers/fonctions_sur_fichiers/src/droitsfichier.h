@@ -1,0 +1,4 @@
+#ifndef H_DROITSFICHIER
+#define H_DROITSFICHIER
+
+#endif

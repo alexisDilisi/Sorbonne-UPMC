@@ -16,6 +16,11 @@ int main(int argc, char** argv)
 {
 	struct stat statFichier1, statFichier2;
 
+	if(argc != 3)
+	{
+		printf("%s\n", "usage : ./memefichier <fchier 1> <fichier 2>");
+		return EXIT_FAILURE;
+	}
 	if (lstat(argv[1], &statFichier1) == -1)
 	{
 		perror(argv[1]);
